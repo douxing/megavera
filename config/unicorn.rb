@@ -15,7 +15,7 @@ stdout_path "#{Rails.root}/log/unicorn.log"
 
 #listen 5000, :tcp_nopush => false
 
-listen "/tmp/unicorn.magevera.sock"
+listen "/tmp/unicorn.megavera.sock"
 worker_processes 4
 timeout 120
 
