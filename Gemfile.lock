@@ -176,7 +176,6 @@ DEPENDENCIES
   capistrano-rails (~> 1.1.1)
   capistrano-rvm
   ckeditor
-  coffee-rails (~> 4.0.0)
   default_value_for
   font-awesome-sass
   jbuilder (~> 2.0)
