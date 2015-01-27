@@ -1,0 +1,182 @@
+$font-stack: Arail, Microsoft YaHei UI, Microsoft YaHei, sans-serif;
+$font-color: #666666;
+$white: #ffffff;
+$bg-dark: #1a1a1a;
+$topper-dark: #333333;
+$width: 960px;
+$topper-height: 90px;
+
+@mixin opacity($val){
+  filter: alpha(opacity= $val* 100);
+  -moz-opacity: $val;
+  -khtml-opacity: $val;
+  opacity: $val;
+}
+
+@mixin box-shadow($left, $top, $blur, $color:#000) {
+    -webkit-box-shadow: $left $top $blur $color;
+    -moz-box-shadow: $left $top $blur $color;
+    box-shadow: $left $top $blur $color;
+}
+
+@mixin cells($cols, $rows, $cgap, $rgap:$cgap) {
+    &>li + li {
+        margin-left: $cgap;
+        margin-top: $rgap;
+    }
+    @for $i from 0 to $cols {
+        &>li:nth-child(#{$i + 1}) {
+            margin-top: 0;
+        }
+    }
+    @for $i from 0 to $rows {
+        &>li:nth-child(#{$i * $cols + 1}) {
+            margin-left: 0;
+        }
+    }
+}
+
+body {
+    color: $font-color;
+    font-family: $font-stack;
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    display: block;
+}
+
+p {
+    display: block;
+}
+
+ul, ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    cursor: pointer;
+    text: {
+        decoration: none;
+    }
+    &:hover {
+        text: {
+            decoration: none;
+        }
+    }
+}
+
+img {
+    border: none;
+    display: block;
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+    font: {
+        size: 100%;
+        weight: normal;
+    }
+}
+
+h3 {
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $bg-dark;
+}
+
+.dropdown {
+    display: block;
+    &>ul {
+        display: none;
+    }
+
+    &:hover {
+        &>ul {
+            display: block;
+        }
+    }
+}
+
+.left, .right {
+    &:after {
+        content: ' ';
+        clear: both;
+        display: "table";
+    }
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+
+.header {
+    width: 100%;
+    min-width: $width;
+    height: $topper-height;
+    color: $white;
+    font-size: 13px;
+    background-color: $topper-dark;
+
+    a {
+        color: $white;
+    }
+
+    .nav {
+        margin: 0 auto;
+        width: $width;
+        height: 100%;
+
+        &>* {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .logo {
+            background: url(asset-path('logo.png')) no-repeat center;
+            width: 290px;
+            height: 100%;
+        }
+
+        .menus {
+            width: 670px;
+            .menu {
+                display: block;
+                width: 100%;
+                line-height: 45px;
+                height: 45px;
+                &>ul {
+                    &>li {
+                        display: inline-block;
+                        vertical-align: top;
+                    }
+                    &>li + li {
+                        margin-left: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.container {
+    margin-top: $topper-height;
+}

@@ -1,0 +1,36 @@
+.nav
+  .logo
+  .menus
+    .menu
+      ul.left
+        li= link_to t('home'), '#'
+        li= link_to t('news'), '#'
+        li= link_to t('career'), '#'
+        li= link_to t('contact'), '#'
+      ul.right
+        li= link_to t('en'), '#'
+        li= link_to t('zh'), '#'
+    .menu
+      ul.left
+        li.dropdown
+          = link_to t('specialities'), '#'
+          ul
+            li= link_to t('consulting'), '#'
+            li= link_to t('DEM'), '#'
+            li= link_to t('TkS'), '#'
+        li.dropdown
+          = link_to t('TS'), '#'
+          ul
+            li= link_to t('ABH'), '#'
+            li= link_to t('PP'), '#'
+            li= link_to t('WD'), '#'
+        li.dropdown
+          = link_to t('advantages'), '#'
+          ul
+            li= link_to t('IQE'), '#'
+            li= link_to t('LMS'), '#'
+            li= link_to t('FRES'), '#'
+            li= link_to t('FICF'), '#'
+            li= link_to t('IHT'), '#'
+            li= link_to t('SLTHF'), '#'
+            li= link_to t('CP'), '#'

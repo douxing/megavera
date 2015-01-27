@@ -11,6 +11,7 @@ html xmlns="http://www.w3.org/1999/xhtml"
     = csrf_meta_tags
   body
     .header
+      == render 'layouts/header'
     .container
       == yield
     .footer
