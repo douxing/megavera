@@ -1,7 +1,7 @@
 .nav
   .logo
   .menus
-    .menu
+    .menu.top
       ul.left
         li= link_to t('home'), '#'
         li= link_to t('news'), '#'
@@ -10,23 +10,26 @@
       ul.right
         li= link_to t('en'), '#'
         li= link_to t('zh'), '#'
-    .menu
+    .menu.bottom
       ul.left
         li.dropdown
-          = link_to t('specialities'), '#'
-          ul
+          = link_to t('specialties'), '#', class: 'dropdown-toggle'
+          span.caret
+          ul.dropdown-menu
             li= link_to t('consulting'), '#'
             li= link_to t('DEM'), '#'
             li= link_to t('TkS'), '#'
         li.dropdown
-          = link_to t('TS'), '#'
-          ul
+          = link_to t('TS'), '#', class: 'dropdown-toggle'
+          span.caret
+          ul.dropdown-menu
             li= link_to t('ABH'), '#'
             li= link_to t('PP'), '#'
             li= link_to t('WD'), '#'
         li.dropdown
-          = link_to t('advantages'), '#'
-          ul
+          = link_to t('advantages'), '#', class: 'dropdown-toggle'
+          span.caret
+          ul.dropdown-menu
             li= link_to t('IQE'), '#'
             li= link_to t('LMS'), '#'
             li= link_to t('FRES'), '#'
