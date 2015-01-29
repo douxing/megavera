@@ -5,6 +5,9 @@ class HomeController < ApplicationController
   def contact
   end
 
-  def careers
+  def career
+  end
+
+  def news
   end
 end

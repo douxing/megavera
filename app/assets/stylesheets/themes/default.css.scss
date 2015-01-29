@@ -425,3 +425,19 @@ body {
         }
     }
 }
+
+.draft {
+    width: 100%;
+    color: $white;
+    .item {
+        text-align: center;
+        border: 1px solid $white;
+        @include border-left-radius(3px);
+        @include border-right-radius(3px);
+        margin-bottom: 20px;
+    }
+    h1 {
+        font-size: 26px;
+        font-weight: bold;
+    }
+}
