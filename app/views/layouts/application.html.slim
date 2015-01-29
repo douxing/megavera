@@ -15,5 +15,6 @@ html xmlns="http://www.w3.org/1999/xhtml"
     .container
       == yield
     .footer
+      == render 'layouts/footer'
     = javascript_include_tag "application"
     == yield(:js_files)

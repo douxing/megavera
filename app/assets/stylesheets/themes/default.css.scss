@@ -123,6 +123,7 @@ body {
 
     &>.dropdown-menu {
         position: absolute;
+        z-index: 99;
         display: none;
         top: 100%;
         left: 0;
@@ -212,6 +213,7 @@ body {
                     overflow: hidden;
                 }
                 &.bottom {
+                    @include clearfix();
                     .dropdown {
                         .dropdown-toggle {
                             height: 45px;
@@ -244,6 +246,17 @@ body {
     }
 }
 
+.footer {
+    color: $white;
+    width: 100%;
+    margin-top: 50px;
+    .footer-info {
+        width: $width;
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+
 .container {
     font-size: 16px;
     color: $white;
@@ -258,10 +271,109 @@ body {
     }
 }
 
+.sliders {
+    width: 100%;
+    position: relative;
+    &>.arrow {
+        position: absolute;
+        cursor: pointer;
+        width: 36px;
+        height: 60px;
+        top: 50%;
+        margin-top: -30px;
+        text-align: center;
+        @include opacity(0.8);
+        &:before {
+            content: "";
+            border: 10px solid transparent;
+            display: inline-block;
+            vertical-align: middle;
+            width: 10px;
+            height: 10px;
+        }
+
+        &:after {
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            width: 1px;
+            height: 60px;
+        }
+
+        &:hover {
+            background-color: $topper-dark;
+        }
+
+        &.pre {
+            left: 0;
+            &:before {
+                border-right: 10px solid $white;
+                margin-left: -10px;
+            }
+        }
+
+        &.next {
+            right: 0;
+            &:before {
+                border-left: 10px solid $white;
+                margin-left: 10px;
+            }
+        }
+    }
+    .item {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        .info {
+            position: absolute;
+            display: block;
+            bottom: 0;
+            width: 100%;
+            color: $white;
+            height: 42px;
+            padding: 0 15px;
+            font-size: 14px;
+            line-height: 42px;
+            background-color: $black;
+            @include opacity(0.8);
+        }
+    }
+
+    .indicators {
+        width: 100%;
+        height: 50px;
+        text-align: center;
+        &:before, &:after {
+            content: '';
+            width: 1px;
+            height: 50px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        &>.indicator {
+            display: inline-block;
+            vertical-align: middle;
+            background-color: $white;
+            width: 10px;
+            height: 10px;
+            @include border-left-radius(5px);
+            @include border-right-radius(5px);
+            &.active {
+                background-color: $blue;
+            }
+        }
+    }
+}
+
 .home {
     &.row {
-        &>* {
-            padding: 0 15px;
+        &>.col-4 + .col-4 {
+            padding-left: 30px;
         }
     }
 
