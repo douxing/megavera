@@ -1,0 +1,106 @@
+$font-stack: Arail, Microsoft YaHei UI, Microsoft YaHei, sans-serif;
+
+@mixin opacity($val){
+  filter: alpha(opacity= $val* 100);
+  -moz-opacity: $val;
+  -khtml-opacity: $val;
+  opacity: $val;
+}
+
+@mixin box-shadow($left, $top, $blur, $color:#000) {
+    -webkit-box-shadow: $left $top $blur $color;
+    -moz-box-shadow: $left $top $blur $color;
+    box-shadow: $left $top $blur $color;
+}
+
+@mixin cells($cols, $rows, $cgap, $rgap:$cgap) {
+    &>li + li {
+        margin-left: $cgap;
+        margin-top: $rgap;
+    }
+    @for $i from 0 to $cols {
+        &>li:nth-child(#{$i + 1}) {
+            margin-top: 0;
+        }
+    }
+    @for $i from 0 to $rows {
+        &>li:nth-child(#{$i * $cols + 1}) {
+            margin-left: 0;
+        }
+    }
+}
+
+body {
+    font-family: $font-stack;
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    display: block;
+}
+
+p {
+    display: block;
+}
+
+ul, ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    cursor: pointer;
+    text: {
+        decoration: none;
+    }
+    &:hover {
+        text: {
+            decoration: none;
+        }
+    }
+}
+
+img {
+    border: none;
+    display: block;
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+    font: {
+        size: 100%;
+        weight: normal;
+    }
+}
+
+h3 {
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.left, .right {
+    &:after {
+        content: ' ';
+        clear: both;
+        display: table;
+    }
+}
+
+.left {
+    float: left;
+    display: block;
+}
+
+.right {
+    float: right;
+    display: block;
+}
