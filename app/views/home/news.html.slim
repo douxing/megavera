@@ -1,14 +1,17 @@
-.draft
-  .item.desc
-    p This page is news page, give you a place to publish news.
-    p There will be a back-end management page, so you can DIY your news with in this page.
-  .item
-    p News content
-  .item
-    p News content
-  .item
-    p News content
-  .item
-    p News content
-  .item
-    p Pagination
+.news
+  .block.title-block
+    .big.gray
+      h2= t('Megavera Newsletter')
+      p.content In our monthly newsletters we compile current information on China concerning politics and economic politics as well as news on companies working in the areas of mechanical engineering/automotive, aviation, construction/infrastructure/chemistry/healthcare, renewable energies/environment/agriculture, consumer goods/IT/logistics, finance etc. especially for you. You have the opportunity to download them for free on our website.
+    .small.gray
+      = image_tag('news_title.jpg')
+  .block
+    .big
+      ul
+        li.news-item
+          .left
+            = image_tag('news_title.jpg')
+          .right
+            h3 News Title
+            .content One of the largest Chinese busmanufacturers, Youngman Automobile Group Ltd., acquired
+    .smal.gray
