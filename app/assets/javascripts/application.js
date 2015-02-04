@@ -11,6 +11,20 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
-//= require turbolinks
 //= require_tree .
+
+$(document).ready(function () {
+  $(".tabs-nav").children().click(function() {
+    var $active = $(this).parent().children(".active");
+    $active.removeClass("active").animate({
+      paddingLeft: 0
+    });
+    $(this).addClass("active").animate({
+      paddingLeft: "10px"
+    });
+    $(".artical").removeClass("active");
+    var $artical = $(".artical").eq($(this).parent().children().index(this));
+    $artical.addClass("active");
+  });
+  $(".tabs-nav").children().first().click();
+});

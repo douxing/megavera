@@ -10,4 +10,13 @@ class HomeController < ApplicationController
 
   def news
   end
+
+  def specialities
+  end
+
+  def typical_solution
+  end
+
+  def advantages
+  end
 end

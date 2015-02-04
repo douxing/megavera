@@ -6,6 +6,9 @@ Rails.application.routes.draw do
       get :contact
       get :career
       get :news
+      get :specialities
+      get :typical_solution
+      get :advantages
     end
   end
 end

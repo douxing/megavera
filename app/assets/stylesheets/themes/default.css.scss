@@ -117,6 +117,7 @@ h3 {
         &>* {
             display: table-cell;
             overflow: hidden;
+            whitespace: pre-wrap;
             vertical-align: top;
             @include box-shadow(3px, 3px, 1px, #111);
         }
@@ -153,7 +154,7 @@ h3 {
         h2 {
             font-weight: bold;
             font-size: 20px;
-            padding-bottom: 25px;
+            margin-bottom: 25px;
         }
 
         h3 {
@@ -161,36 +162,50 @@ h3 {
             font-size: 18px;
         }
 
+        p {
+            margin-bottom: 30px;
+        }
+
         .indent {
             margin-left: 30px;
         }
     }
 
-    .content {
+    .tabs-content {
         &>* {
             display: inline-block;
             vertical-align: top;
         }
+
+        .artical {
+            display: none;
+            &.active {
+                display: block;
+            }
+        }
+
         .tabs-nav {
             background-color: $dark-gray;
             width: 228px;
-            font-size: 18px;
+            font-size: 14px;
             font-weight: bold;
             @include box-shadow(1px, 1px, 1px, $dark-gray);
             &>* {
                 display: block;
                 width: 100%;
-                padding: 0 20px;
-                line-height: 50px;
-                height: 50px;
                 border-right: 2px solid $bg-color;
                 cursor: pointer;
-                &:hover {
+                &:hover, &.active {
                     background-color: $white;
                     border-right: 2px solid $white;
                     a, a:hover {
                         color: #485463;
                     }
+                }
+
+                &>a {
+                    padding: 15px 20px;
+                    display: inline-block;
                 }
             }
         }
@@ -226,6 +241,7 @@ h3 {
         padding: 10px 20px;
         overflow: hidden;
         background-color: #1d242e;
+        cursor: pointer;
         .left {
             width: 240px;
             img {
