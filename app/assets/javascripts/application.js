@@ -11,7 +11,6 @@
 // about supported directives.
 //
 //= require jquery
-//= require_tree .
 
 $(document).ready(function () {
   $(".tabs-nav").children().click(function() {

@@ -1,4 +1,11 @@
 class HomeController < ApplicationController
+  def login
+    render layout: false
+  end
+
+  def logout
+  end
+
   def show
   end
 
@@ -17,6 +24,6 @@ class HomeController < ApplicationController
   def typical_solution
   end
 
-  def advantages
+  def about
   end
 end

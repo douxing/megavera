@@ -1,0 +1,19 @@
+doctype html
+html xmlns="http://www.w3.org/1999/xhtml"
+  head
+  meta charset='utf-8'
+    meta http-equiv='X-UA-Compatible' content='IE=edge'
+    meta name='viewport' content='width=device-width, initial-scale=1'
+    meta name='renderer' content='webkit'
+    title= @title || 'Megavera Admin'
+    = favicon_link_tag 'favicon.ico'
+    = stylesheet_link_tag 'admin', media: 'all'
+    = csrf_meta_tags
+  body
+    .container
+      = form_tag '#', method: :post, class: 'form-signin' do
+        h2.form-signin-headin Megavera Login
+        = text_field_tag :name, nil, placeholder: 'Login Name', class: 'form-control'
+        = password_field_tag :password, nil, placeholder: 'Password', class: 'form-control'
+        = submit_tag 'Sign In', class: 'btn btn-lg btn-primary btn-block'
+    = javascript_include_tag "admin"

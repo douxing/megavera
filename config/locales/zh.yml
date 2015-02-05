@@ -19,11 +19,11 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
-  home: 'Home'
-  news: 'News'
-  career: 'Career'
-  contact: 'Contact'
+zh:
+  home: '主页'
+  news: '新闻'
+  career: '招聘'
+  contact: '联系我们'
   en: 'EN'
   zh: '中文'
   specialties: 'Specialties'
@@ -34,7 +34,7 @@ en:
   ABH: 'Airport Baggage Handling'
   PP: 'Post and Parcel'
   WD: 'Warehouse and Distribution'
-  about_us: 'About Us'
+  about_us: '简介'
   IQE: 'International Quality and Experience'
   LMS: 'Local Manufacturing and Service'
   FRES: 'Full Range of Equipments and Solutions'
