@@ -15,7 +15,11 @@ Rails.application.routes.draw do
   end
 
   resources :news, controller: 'news', expect: [:index]
-  get '/login' => 'home#login'
-  delete '/logout' => 'home#logout'
+  resource :admin, controller: 'admin', only: [:show] do
+  end
+
+  get '/login' => 'admin#new_session'
+  post '/login' => 'admin#create_session'
+  delete '/logout' => 'admin#destroy_session'
   get '/:locale' => 'home#show'
 end
