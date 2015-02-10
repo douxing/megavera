@@ -1,6 +1,5 @@
-p#notice = notice
-
-
-= link_to 'Edit', edit_news_path(@news)
-'|
-= link_to 'Back', news_index_path
+.artical
+  h2= @news.title
+  .indent
+    p= image_tag @news.image
+    p= @news.content

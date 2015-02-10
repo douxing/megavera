@@ -9,11 +9,15 @@ html xmlns="http://www.w3.org/1999/xhtml"
     = favicon_link_tag 'favicon.ico'
     = stylesheet_link_tag 'admin', media: 'all'
     = csrf_meta_tags
-  body.login
-    .container
-      = form_tag '#', method: :post, class: 'form-signin' do
-        h2.form-signin-headin Megavera Login
-        = text_field_tag :name, nil, placeholder: 'Login Name', class: 'form-control'
-        = password_field_tag :password, nil, placeholder: 'Password', class: 'form-control'
-        = submit_tag 'Sign In', class: 'btn btn-lg btn-primary btn-block'
+  body.gray-bg
+    .middle-box.text-center.loginscreen.animated.fadeInDown
+      .logo-name
+        h1 M+
+      h3 Welcome to Megavera
+      = form_tag login_path, method: :post, class: 'm-t' do
+        .form-group
+          = text_field_tag :name, nil, placeholder: 'Login Name', class: 'form-control'
+        .form-group
+          = password_field_tag :password, nil, placeholder: 'Password', class: 'form-control'
+        = submit_tag 'Sign In', class: 'btn btn-primary block full-width m-b'
     = javascript_include_tag "admin"

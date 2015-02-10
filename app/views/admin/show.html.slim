@@ -7,17 +7,18 @@
       .ibox-title
         h5 News
         .ibox-tools
-          span.label.label-waring-light 10 News
+          span.label.label-waring-light= "#{News.count} news"
       .ibox-content
         .feed-activity-list
-          .feed-element
-            div
-              strong News Title
-              div One of the largest Chinese busmanufacturers, Youngman Automobile Group Ltd., acquired
-              small.block.text-muted
-                i.fa.fa-clock
-                span 2015-1-4 9:20
-        button.btn.btn-primary.btn-block.m-t
+          - News.all.each do |item|
+            .feed-element
+              div
+                strong= item.title
+                div= item.content
+                small.block.text-muted
+                  i.fa.fa-clock
+                  span= item.created_at
+        = link_to new_news_path, class: "btn btn-primary btn-block m-t" do
           i.fa.fa-plus
           span Add News
   .col-sm-6

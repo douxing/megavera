@@ -14,8 +14,9 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :news, controller: 'news', expect: [:index]
+  resources :news, controller: 'news'
   resource :admin, controller: 'admin', only: [:show] do
+    resource :password, controller: 'password', only: [:new, :create, :edit, :update]
   end
 
   get '/login' => 'admin#new_session'

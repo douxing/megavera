@@ -41,9 +41,9 @@ html xmlns="http://www.w3.org/1999/xhtml"
                   li
                     = link_to "New News", new_news_path
               li
-                = link_to "#" do
+                = link_to edit_admin_password_path do
                   i.fa.fa-cog
-                  span.nav-label Settings
+                  span.nav-label Change Password
       #page-wrapper.gray-bg.dashboard-1
         == yield
     = javascript_include_tag "admin"

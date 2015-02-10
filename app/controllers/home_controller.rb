@@ -6,6 +6,7 @@ class HomeController < ApplicationController
   end
 
   def news
+    @news = News.order("created_at DESC")
   end
 
   def specialities

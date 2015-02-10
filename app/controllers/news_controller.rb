@@ -1,10 +1,16 @@
 class NewsController < ApplicationController
   layout "admin"
   before_action :set_news, only: [:show, :edit, :update, :destroy]
+  before_filter :check_admin, except: [:show]
+
+  def index
+    @news = News.order("created_at DESC")
+  end
 
   # GET /news/1
   # GET /news/1.json
   def show
+    render layout: "application"
   end
 
   # GET /news/new
@@ -64,6 +70,6 @@ class NewsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def news_params
-      params[:news]
+      params.require(:news).permit(:title, :chinese_title, :content, :chinese_content)
     end
 end

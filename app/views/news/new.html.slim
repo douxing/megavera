@@ -5,12 +5,11 @@
   .col-lg-12
     .ibox.float-e-margins
       .ibox-title
+      - if @news.errors.any?
+        .ibox-content.ibox-heading
+          h2 = "#{pluralize(@news.errors.count, "error")} prohibited this news from being saved:"
+          ul
+            - @news.errors.full_messages.each do |message|
+              li = message
       .ibox-content
-        = form_for @news, html: { class: "form-horizontal" } do |f|
-          .form-group
-            = f.label :title, class: "col-sm-2 control-label"
-            .col-sm-10
-              = f.text_field :title, class: 'form-control'
-          .form-group
-            .col-sm-4.col-sm-offset-2
-              = f.submit "Save", class: "btn btn-primary"
+        == render 'form'

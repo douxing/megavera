@@ -1,8 +1,16 @@
-h1 Editing news
-
-== render 'form'
-
-= link_to 'Show', @news
-'|
-= link_to 'Back', news_index_path
+.row.border-bottom.white-bg.dashboard-header
+  h2 Edit News
+  small Edit news here
+.row
+  .col-lg-12
+    .ibox.float-e-margins
+      .ibox-title
+      - if @news.errors.any?
+        .ibox-content.ibox-heading
+          h2 = "#{pluralize(@news.errors.count, "error")} prohibited this news from being saved:"
+          ul
+            - @news.errors.full_messages.each do |message|
+              li = message
+      .ibox-content
+        == render 'form'
 

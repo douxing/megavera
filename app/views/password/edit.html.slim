@@ -1,0 +1,30 @@
+.row.border-bottom.white-bg.dashboard-header
+  h2 Edit Password
+  small Edit your password here
+.row
+  .col-lg-12
+    .ibox.float-e-margins
+      .ibox-title
+      - if current_user.errors.any?
+        .ibox-content.ibox-heading
+          h2 = "#{pluralize(current_user.errors.count, "error")} prohibited this news from being saved:"
+          ul
+            - current_user.errors.full_messages.each do |message|
+              li = message
+      .ibox-content
+        = form_tag admin_password_path, method: :put, class: "form-horizontal" do
+          .form-group
+            = label_tag :current_password, nil, class: "col-sm-2 control-label"
+            .col-sm-10
+              = password_field_tag :current_password, nil, class: "form-control"
+          .form-group
+            = label_tag :password, nil, class: "col-sm-2 control-label"
+            .col-sm-10
+              = password_field_tag :password, nil, class: "form-control"
+          .form-group
+            = label_tag :password_confirmation, nil, class: "col-sm-2 control-label"
+            .col-sm-10
+              = password_field_tag :password_confirmation, nil, class: "form-control"
+          .form-group
+            .col-sm-4.col-sm-offset-2
+              = submit_tag "Save", class: "btn btn-primary"
