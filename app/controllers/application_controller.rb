@@ -21,6 +21,11 @@ class ApplicationController < ActionController::Base
   end
 
   def check_admin
-    !current_user.blank?
+    if current_user.blank?
+      redirect_to login_path
+      false
+    else
+      true
+    end
   end
 end
