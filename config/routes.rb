@@ -16,6 +16,13 @@ Rails.application.routes.draw do
 
   resources :news, controller: 'news'
   resource :admin, controller: 'admin', only: [:show] do
+    member do
+      get :social_recruitment, to: 'admin#edit_social_recruitment'
+      put :social_recruitment, to: 'admin#update_social_recruitment'
+      get :internship, to: 'admin#edit_internship'
+      put :internship, to: 'admin#update_internship'
+    end
+
     resource :password, controller: 'password', only: [:new, :create, :edit, :update]
   end
 

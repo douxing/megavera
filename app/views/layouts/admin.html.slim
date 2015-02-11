@@ -41,6 +41,16 @@ html xmlns="http://www.w3.org/1999/xhtml"
                   li
                     = link_to "New News", new_news_path
               li
+                = link_to "#" do
+                  i.fa.fa-group
+                  span.nav-label Jobs
+                  span.fa.arrow
+                ul.nav.nav-second-level.collapse
+                  li.active
+                    = link_to "Social Recruitment", social_recruitment_admin_path(config_locale: :en)
+                  li
+                    = link_to "Internship", internship_admin_path(config_locale: :en)
+              li
                 = link_to edit_admin_password_path do
                   i.fa.fa-cog
                   span.nav-label Change Password

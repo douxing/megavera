@@ -1,0 +1,25 @@
+.row.border-bottom.white-bg.dashboard-header
+  h2= "Edit #{config.name_str}"
+  small= "Edit #{config.name_str} here"
+.row
+  .col-lg-12
+    .ibox.float-e-margins
+      .ibox-title
+        h5= "#{config.locale} Version"
+        - (SysConfig.get_locales(config.name) - [config.locale]).each do |locale|
+          = link_to "Change to #{locale}", { config_locale: locale }, class: 'label label-primary'
+      - if config.errors.any?
+        .ibox-content.ibox-heading
+          h2 = "#{pluralize(@config.errors.count, "error")} prohibited this news from being saved:"
+          ul
+            - config.errors.full_messages.each do |message|
+              li = message
+      .ibox-content
+        = form_tag form_path, method: :put, class: "form-horizontal" do |f|
+          = hidden_field_tag :config_locale, config.locale
+          .form-group
+            .col-sm-12
+              = cktext_area_tag :value, config.value, class: 'form-control'
+          .form-group
+            .col-sm-4
+              = submit_tag "Save", class: "btn btn-primary"
