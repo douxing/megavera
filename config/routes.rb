@@ -2,16 +2,14 @@ Rails.application.routes.draw do
   root 'home#show'
   mount Ckeditor::Engine => '/ckeditor'
 
-  scope "/:locale", locale: /en|zh/ do
-    resource :home, controller: 'home', only: [:show] do
-      member do
-        get :contact
-        get :career
-        get :news
-        get :specialities
-        get :typical_solution
-        get :about
-      end
+  resource :home, controller: 'home', only: [:show] do
+    member do
+      get :contact
+      get :career
+      get :news
+      get :specialities
+      get :typical_solution
+      get :about
     end
   end
 

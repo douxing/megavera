@@ -3,8 +3,8 @@
     = image_tag 'logo.png'
   .right
     ul.block.lang
-      li= link_to t('en'), '/en'
-      li= link_to t('zh'), '/zh'
+      li= link_to t('en'), '?locale=en'
+      li= link_to t('zh'), '?locale=zh'
     ul.block.menus
       li= link_to t('home'), root_path
       li= link_to t('about_us'), about_home_path
