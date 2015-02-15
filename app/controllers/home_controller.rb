@@ -6,7 +6,7 @@ class HomeController < ApplicationController
   end
 
   def news
-    @news = News.order("created_at DESC")
+    @news = News.by_locale(params[:locale] || 'en').order("index_id DESC")
   end
 
   def specialities

@@ -3,6 +3,8 @@ class AdminController < ApplicationController
   layout "admin", except: [:new_session, :create_session]
 
   def show
+    @news = News.all_indexes.order("index_id DESC").limit(10)
+    @news_count = News.all_indexes.pluck(:id).count
   end
 
   def new_session

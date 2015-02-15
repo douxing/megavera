@@ -1,23 +1,14 @@
 = form_for @news, html: { class: "form-horizontal" } do |f|
-  .row
-    .col-lg-6
-      .form-group
-        = f.label :title, class: "col-sm-2 control-label"
-        .col-sm-10
-          = f.text_field :title, class: 'form-control'
-      .form-group
-        = f.label :content, class: "col-sm-2 control-label"
-        .col-sm-10
-          = f.text_area :content, rows: 10, class: 'form-control'
-    .col-lg-6
-      .form-group
-        = f.label :chinese_title, class: "col-sm-2 control-label"
-        .col-sm-10
-          = f.text_field :chinese_title, class: 'form-control'
-      .form-group
-        = f.label :chinese_content, class: "col-sm-2 control-label"
-        .col-sm-10
-          = f.text_area :chinese_content, rows: 10, class: 'form-control'
+  = f.hidden_field :news_locale
+  = f.hidden_field :index_id
+  .form-group
+    = f.label :title, class: "col-sm-2 control-label"
+    .col-sm-10
+      = f.text_field :title, class: 'form-control'
+  .form-group
+    = f.label :content, class: "col-sm-2 control-label"
+    .col-sm-10
+      = f.cktext_area :content, class: 'form-control'
   .form-group
     .col-sm-4.col-sm-offset-2
       = f.submit "Save", class: "btn btn-primary"

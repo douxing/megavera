@@ -9,10 +9,14 @@
         .ibox.float-e-margins
           .ibox-title
             h5= item.title
+            span.label.label-primary= item.created_at
             .ibox-tools
-              =link_to edit_news_path(item) do
+              =link_to edit_news_path(item.index_id) do
                 i.fa.fa-wrench
-              = link_to item, method: :delete, data: { confirm: 'Are you sure?' } do
+              = link_to news_path(item.index_id), method: :delete, data: { confirm: 'Are you sure?' } do
                 i.fa.fa-times
           .ibox-content
-            p= item.content
+            p== item.content
+  .row
+    .col-lg-12
+      = paginate @index_ids

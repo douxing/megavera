@@ -5,6 +5,11 @@
   .col-lg-12
     .ibox.float-e-margins
       .ibox-title
+        h5= "#{@news.news_locale} Version"
+        .pull-right
+          .btn-group
+            = link_to 'EN Version', new_news_path(@news.index_id, news_locale: 'en'), class: "btn btn-xs btn-white #{'en' == @news.news_locale ? 'active' : ''}"
+            = link_to 'ZH Version', new_news_path(@news.index_id, news_locale: 'zh'), class: "btn btn-xs btn-white #{'zh' == @news.news_locale ? 'active' : ''}"
       - if @news.errors.any?
         .ibox-content.ibox-heading
           h2 = "#{pluralize(@news.errors.count, "error")} prohibited this news from being saved:"

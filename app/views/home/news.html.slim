@@ -9,7 +9,7 @@
     ul
       - @news.each do |item|
         li.news-item
-          = link_to item do
+          = link_to news_path(item.index_id) do
             .left
               = image_tag('news_title.jpg')
             .right

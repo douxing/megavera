@@ -1,7 +1,7 @@
 require 'digest/sha1'
 
 class SysConfig < ActiveRecord::Base
-  validates :name, presence: true
+  validates :name, presence: true, uniqueness: true
   validates :value, presence: true, allow_blank: true
 
   def self.find_config(name, locale)
