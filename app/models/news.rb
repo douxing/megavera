@@ -10,6 +10,20 @@ class News < ActiveRecord::Base
 
   before_create :calc_index_id
 
+  def first_image
+    doc = Nokogiri::HTML.fragment(content)
+    img = doc.at_css('img')
+    return nil unless img
+
+    img['src']
+  end
+
+  def content_without_image
+    doc = Nokogiri::HTML.fragment(content)
+    doc.css('img').remove
+    doc.to_s
+  end
+
   private
   def calc_index_id
     if self.index_id.nil?

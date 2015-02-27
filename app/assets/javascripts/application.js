@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require swiper
 
 $(document).ready(function () {
   $(".tabs-nav").children().click(function() {
@@ -26,4 +27,9 @@ $(document).ready(function () {
     $artical.addClass("active");
   });
   $(".tabs-nav").children().first().click();
+
+  var swiper = new Swiper('.swiper-container', {
+    pagination: '.swiper-pagination',
+    paginationClickable: true
+  });
 });

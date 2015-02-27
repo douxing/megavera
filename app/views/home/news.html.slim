@@ -5,13 +5,12 @@
       p.content In our monthly newsletters we compile current information on China concerning politics and economic politics as well as news on companies working in the areas of mechanical engineering/automotive, aviation, construction/infrastructure/chemistry/healthcare, renewable energies/environment/agriculture, consumer goods/IT/logistics, finance etc. especially for you. You have the opportunity to download them for free on our website.
     .small.gray
       = image_tag('news_title.jpg')
-  .block
-    ul
-      - @news.each do |item|
-        li.news-item
-          = link_to news_path(item.index_id) do
-            .left
-              = image_tag('news_title.jpg')
-            .right
-              h3= item.title
-              .content= item.content
+  - @news.each do |item|
+    .news-item
+      = link_to news_path(item.index_id) do
+        .left
+          = image_tag(item.first_image ? item.first_image : 'news_title.jpg')
+        .right
+          h3= item.title
+          .content== item.content_without_image
+  = paginate @index_ids

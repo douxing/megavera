@@ -217,6 +217,10 @@ h3 {
 }
 
 .home {
+    .swiper-container {
+        width: 685px;
+        height: 514px;
+    }
     .small {
         padding: 12px 15px;
         .content {
@@ -242,6 +246,7 @@ h3 {
         overflow: hidden;
         background-color: #1d242e;
         cursor: pointer;
+        @include box-shadow(3px, 3px, 1px, #111);
         .left {
             width: 240px;
             img {
@@ -249,8 +254,32 @@ h3 {
             }
         }
         .right {
-            width: 403px;
+            width: 646px;
             padding-left: 15px;
+        }
+    }
+}
+
+.pagination {
+    margin-top: 20px;
+    &>* {
+        display: inline;
+        padding: 5px;
+        margin: 5px;
+        background-color: $white;
+        @include border-left-radius(5px);
+        @include border-right-radius(5px);
+        a {
+            color: #485463;
+        }
+        &:hover {
+            a {
+                color: $light-blue;
+            }
+        }
+        &.current {
+            background: transparent;
+            color: #fff;
         }
     }
 }

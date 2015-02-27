@@ -1,9 +1,11 @@
 .block.home
-  .big.slider
-    ul
-      li= image_tag('slide_1.jpg')
-    .indicators
-      span.indicator
+  .big
+    .swiper-container
+      .swiper-wrapper
+        .swiper-slide= image_tag('slide_1.jpg')
+        .swiper-slide= image_tag('slide_1.jpg')
+        .swiper-slide= image_tag('slide_1.jpg')
+      .swiper-pagination
   .small.gray
     h2 MBL China Consulting
     .content MBL China Consulting is a strategic management consulting company that is devoted to strengthen economic Relations between China and Europe. It is domiciled in Augsburg with offices in Beijing and Munich and further branch offices in Zhangjiakou, Harbin, Xi'an and Chicago. The core capability of MBL is the implementation of projects concerning economic exchange with China.
