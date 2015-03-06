@@ -1,7 +1,21 @@
+- content_for :js_files do
+  = javascript_include_tag "http://api.map.baidu.com/api?key=&v=1.1&services=true"
 .artical.contact
   h2= t("contact")
-  .indent
-    p 中国上海市嘉定区杭桂路1112号中波商务大厦707室
-    p 电话: +8612345678
-    p 邮箱: test@megavera.com
-    p 网址: www.megavera.com
+  .row
+    .col-4
+      div.p-b
+        h3 地址
+        span 中国上海市嘉定区杭桂路1112号中波商务大厦707室
+      .p-b.p-t
+        h3 电话
+        span +8612345678
+      .p-b.p-t
+        h3 邮件
+        span test@megavera.com
+      .p-b.p-t
+        h3 网址
+        span www.megavera.com
+    .col-8
+      h3 地理位置
+      #map
