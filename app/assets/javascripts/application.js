@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require swiper
+//= require jquery.fancybox
 
 $(document).ready(function () {
   $(".tabs-nav").children().click(function() {
@@ -33,6 +34,48 @@ $(document).ready(function () {
     paginationClickable: true
   });
 
+
+  function fancyPopup() {
+    // Declare some variables.
+    var el = "";
+    var posterPath = "";
+    var replacement = "";
+    var videoTag = "";
+    var fancyBoxId = "";
+    var videoTitle = "";
+    $("video").each(function () {
+      // Reset the variables to empty.
+      el = "";
+      posterPath = "";
+      replacement = "";
+      videoTag = "";
+      fancyBoxId = "";
+      posterPath = "";
+      videoTitle = "";
+
+      el = $(this);
+
+      fancyBoxId = this.id + "_fancyBox";
+      videoTag = el.parent().html();      // This gets the current video tag and stores it.
+      posterPath = el.attr("poster");
+      videoTitle = "Play Video " + this.id;
+      replacement = "<a title='" + videoTitle + "' id='" + fancyBoxId + "' href='javascript:;'><img src='" + posterPath + "' class='img-link'/></a>";
+
+      el.parent().replaceWith(replacement);
+      $("[id=" + fancyBoxId + "]").fancybox(
+        {
+          'content': videoTag,
+          'title': videoTitle,
+          'autoDimensions': true,
+          'padding': 5,
+          'showCloseButton': true,
+          'enableEscapeButton': true,
+          'titlePosition': 'outside'
+        }); // end click function
+    });
+  }
+  fancyPopup();
+
   if($("#map").length === 1) {
     function initMap(){
       createMap();//创建地图
@@ -48,7 +91,7 @@ $(document).ready(function () {
       map.enableScrollWheelZoom();
       map.enableKeyboard();
       map.enableDragging();
-      map.enableDoubleClickZoom()
+      map.enableDoubleClickZoom();
     }
     function addClickHandler(target,window){
       target.addEventListener("click",function(){
@@ -76,6 +119,7 @@ $(document).ready(function () {
         map.addOverlay(marker);
       };
     }
+
     //向地图添加控件
     function addMapControl(){
       var scaleControl = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
