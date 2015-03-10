@@ -1,11 +1,10 @@
 .block.home
   .big
     .swiper-container
-      .swiper-wrapper
-        .swiper-slide= image_tag('slide_1.jpg')
-        .swiper-slide= image_tag('slide_1.jpg')
-        .swiper-slide= image_tag('slide_1.jpg')
-      .swiper-pagination
+      .swiper-slide= image_tag('slide_1.jpg')
+      /!.swiper-wrapper
+      /!  .swiper-slide= image_tag('slide_1.jpg')
+      /!.swiper-pagination
   .small.gray
     h2= t('company_name')
     .content= t('company_desc')
