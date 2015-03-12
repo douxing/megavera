@@ -364,6 +364,23 @@ h3 {
 .solutions {
     .videos {
         padding-top: 30px;
+        .various {
+            position: relative;
+            display: inline-block;
+            &:hover {
+                color: #eee;
+            }
+            &:before {
+                content: "\f144";
+                font-family: "FontAwesome";
+                font-size: 80px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-left: -40px;
+                margin-top: -40px;
+            }
+        }
         img {
             width: 204px;
         }
@@ -383,4 +400,8 @@ h3 {
             }
         }
     }
+}
+
+.hidden {
+    display: none;
 }

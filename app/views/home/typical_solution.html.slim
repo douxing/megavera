@@ -1,3 +1,7 @@
+- content_for :js_files do
+  = javascript_include_tag "//vjs.zencdn.net/4.12/video.js"
+- content_for :css_files do
+  = stylesheet_link_tag "//vjs.zencdn.net/4.12/video-js.css"
 .main-header= t('TS')
 .tabs-content.solutions
   ul.tabs-nav
@@ -12,11 +16,26 @@
       p China is in the period of rapid economic development. Automation is playing an important role in the industry. While Megareva Automation is the one devoted to helping the enterprises of all kinds of industries to do a better job. We can offer a wide range of solutions based on custom-tailored requirements.
       .row.videos
         .col-4
-          = image_tag "media1.jpg"
+          = link_to "#media1", class: "various" do
+            = image_tag "media1.jpg"
+          .hidden
+            #media1
+              video id="media1-video" class="video-js vjs-default-skin" preload="auto" width="800" height="450" data-setup='{"autoplay": false, "controls": true}'
+                source src="#{video_path('media1.mp4')}"
         .col-4
-          = image_tag "media2.jpg"
+          = link_to "#media2", class: "various" do
+            = image_tag "media2.jpg"
+          .hidden
+            #media2
+              video id="media2-video" class="video-js vjs-default-skin" preload="auto" width="800" height="450" data-setup='{"autoplay": false, "controls": true}'
+                source src="#{video_path('media2.mp4')}"
         .col-4
-          = image_tag "media3.jpg"
+          = link_to "#media3", class: "various" do
+            = image_tag "media3.jpg"
+          .hidden
+            #media3
+              video id="media3-video" class="video-js vjs-default-skin" preload="auto" width="800" height="450" data-setup='{"autoplay": false, "controls": true}'
+                source src="#{video_path('media3.mp4')}"
     .artical
       h2 CONSULTANCY
       .row.p-b

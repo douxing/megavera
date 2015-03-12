@@ -29,52 +29,18 @@ $(document).ready(function () {
   });
   $(".tabs-nav").children().first().click();
 
+  /*
   var swiper = new Swiper('.swiper-container', {
     pagination: '.swiper-pagination',
     paginationClickable: true
   });
+   */
 
-
-  function fancyPopup() {
-    // Declare some variables.
-    var el = "";
-    var posterPath = "";
-    var replacement = "";
-    var videoTag = "";
-    var fancyBoxId = "";
-    var videoTitle = "";
-    $("video").each(function () {
-      // Reset the variables to empty.
-      el = "";
-      posterPath = "";
-      replacement = "";
-      videoTag = "";
-      fancyBoxId = "";
-      posterPath = "";
-      videoTitle = "";
-
-      el = $(this);
-
-      fancyBoxId = this.id + "_fancyBox";
-      videoTag = el.parent().html();      // This gets the current video tag and stores it.
-      posterPath = el.attr("poster");
-      videoTitle = "Play Video " + this.id;
-      replacement = "<a title='" + videoTitle + "' id='" + fancyBoxId + "' href='javascript:;'><img src='" + posterPath + "' class='img-link'/></a>";
-
-      el.parent().replaceWith(replacement);
-      $("[id=" + fancyBoxId + "]").fancybox(
-        {
-          'content': videoTag,
-          'title': videoTitle,
-          'autoDimensions': true,
-          'padding': 5,
-          'showCloseButton': true,
-          'enableEscapeButton': true,
-          'titlePosition': 'outside'
-        }); // end click function
-    });
-  }
-  fancyPopup();
+  $(".various").fancybox({
+    maxWidth: 800,
+    maxHeight: 600,
+    closeClick: false
+  });
 
   if($("#map").length === 1) {
     function initMap(){
