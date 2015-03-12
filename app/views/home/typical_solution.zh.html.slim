@@ -12,11 +12,26 @@
       p 中国正处于经济高速增长的时期。自动化行业在其中扮演者重要角色。而璞弘自动化致力于帮助各行各业的企业做的更好。我们可以提供各种解决方案，从而满足客户不同的定制需要。
       .row.videos
         .col-4
-          = image_tag "media1.jpg"
+          = link_to "#media1", class: "various" do
+            = image_tag "media1.jpg"
+          .hidden
+            #media1
+              video id="media1-video" class="video-js vjs-default-skin" preload="auto" width="800" height="450" data-setup='{"autoplay": false, "controls": true}'
+                source src="#{video_path('media1.mp4')}"
         .col-4
-          = image_tag "media2.jpg"
+          = link_to "#media2", class: "various" do
+            = image_tag "media2.jpg"
+          .hidden
+            #media2
+              video id="media2-video" class="video-js vjs-default-skin" preload="auto" width="800" height="450" data-setup='{"autoplay": false, "controls": true}'
+                source src="#{video_path('media2.mp4')}"
         .col-4
-          = image_tag "media3.jpg"
+          = link_to "#media3", class: "various" do
+            = image_tag "media3.jpg"
+          .hidden
+            #media3
+              video id="media3-video" class="video-js vjs-default-skin" preload="auto" width="800" height="450" data-setup='{"autoplay": false, "controls": true}'
+                source src="#{video_path('media3.mp4')}"
     .artical
       h2 咨询
       .row.p-b
