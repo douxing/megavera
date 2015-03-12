@@ -1,3 +1,7 @@
+- content_for :js_files do
+  = javascript_include_tag "//vjs.zencdn.net/4.12/video.js"
+- content_for :css_files do
+  = stylesheet_link_tag "//vjs.zencdn.net/4.12/video-js.css"
 .main-header= t('TS')
 .tabs-content.solutions
   ul.tabs-nav
