@@ -42,6 +42,7 @@ $(document).ready(function () {
     closeClick: false
   });
 
+
   if($("#map").length === 1) {
     function initMap(){
       createMap();//创建地图
