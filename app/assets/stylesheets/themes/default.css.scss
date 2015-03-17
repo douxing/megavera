@@ -218,6 +218,41 @@ h3 {
 }
 
 .home {
+    #slides {
+        font-size: 28px;
+        font-weight: normal;
+        color: #bbb;
+    }
+
+    .desc {
+        font-size: 14px;
+        margin-bottom: 30px;
+        a {
+            color: #586371;
+            i {
+                margin-left: 5px;
+            }
+        }
+    }
+
+    .banners {
+        img {
+            width: 308px;
+        }
+        .banner {
+            display: inline-block;
+            position: relative;
+            .info {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 0;
+                height: 0;
+                background-color: #3498db;
+                overflow: hidden;
+            }
+        }
+    }
     .swiper-container {
         width: 685px;
         height: 514px;

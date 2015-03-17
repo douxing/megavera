@@ -1,4 +1,4 @@
-$font-stack: Arail, Microsoft YaHei UI, Microsoft YaHei, sans-serif;
+$font-stack: Tahoma,Helvetica,'Microsoft Yahei', '微软雅黑',Arial,sans-serif;
 
 @mixin opacity($val){
   filter: alpha(opacity= $val* 100);

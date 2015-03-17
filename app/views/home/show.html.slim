@@ -1,10 +1,23 @@
-.block.home
-  .big
-    .swiper-container
-      .swiper-slide= image_tag('slide_1.jpg')
-      /!.swiper-wrapper
-      /!  .swiper-slide= image_tag('slide_1.jpg')
-      /!.swiper-pagination
-  .small.gray
-    h2= t('company_name')
-    .content= t('company_desc')
+.home
+  .desc
+    #slides
+      .slide_item The best ideas come as jokes. Make your thinking as funny as possible.
+      .slide_item We are a creative company and we can make genius theme for you!
+    = link_to about_home_path do
+      span= t("View about us")
+      i.fa.fa-angle-double-right
+  .banners
+    .banner
+      = image_tag "1.jpg"
+      .info
+        h3= link_to "About us", "#"
+    .banner
+      = image_tag "2.jpg"
+    .banner
+      = image_tag "3.jpg"
+    .banner
+      = image_tag "4.jpg"
+    .banner
+      = image_tag "5.jpg"
+    .banner
+      = image_tag "6.jpg"

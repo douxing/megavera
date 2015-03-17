@@ -13,6 +13,7 @@
 //= require jquery
 //= require swiper
 //= require jquery.fancybox
+//= require jquery.slides
 
 $(document).ready(function () {
   $(".tabs-nav").children().click(function() {
@@ -35,6 +36,39 @@ $(document).ready(function () {
     paginationClickable: true
   });
    */
+
+  $(".banner").mouseenter(function() {
+    $(this).find(".info").stop(true).animate({width: "308px", height: "190px"}, {
+    });
+  }).mouseleave(function() {
+    $(this).find(".info").stop(true).animate({width: 0, height: 0});
+  });
+
+  $("#slides").slidesjs({
+    width: 900,
+    height: 36,
+    navigation: {
+      active: false
+    },
+    pagination: {
+      active: false
+    },
+    play: {
+      active: false,
+      auto: true,
+      interval: 3000,
+      swap: true,
+      pauseOnHover: true,
+      restartDelay: 2000,
+      effect: "fade"
+    },
+    effect: {
+      fade: {
+        speed: 1000,
+        crossfade: true
+      }
+    }
+  });
 
   $(".various").fancybox({
     maxWidth: 800,
