@@ -52,6 +52,7 @@ gem "paperclip", "~> 4.2"
 gem "kaminari"
 gem 'carrierwave'
 gem 'nokogiri'
+gem 'settingslogic'
 
 group :development do
   gem 'capistrano-rails', '~> 1.1.1'

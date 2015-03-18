@@ -57,6 +57,37 @@ class AdminController < ApplicationController
     end
   end
 
+  def edit_theme
+    @colors = []
+    theme_colors.each do |name|
+      @colors << SysConfig.find_config(name, nil)
+    end
+  end
+
+  def update_theme
+    values = params.permit(theme_colors)
+    @colors = []
+    @errors = []
+    values.each do |name, value|
+      config = SysConfig.find_config(name, nil)
+      config.value = value
+      @errors << config unless config.save
+      @colors << config
+    end
+
+    render 'edit_theme'
+  end
+
+  def destroy_theme
+    SysConfig.where(name: theme_colors).destroy_all
+
+    @colors = []
+    theme_colors.each do |name|
+      @colors << SysConfig.find_config(name, nil)
+    end
+    render 'edit_theme'
+  end
+
   protected
   def get_config(name, locale)
     @config = SysConfig.find_config(name, locale)
@@ -68,5 +99,9 @@ class AdminController < ApplicationController
 
   def config_locale
     params.permit(:config_locale)[:config_locale] || 'en'
+  end
+
+  def theme_colors
+    %w(background_color content_background_color content_text_color content_top_background_color content_top_text_color content_menu_background_color)
   end
 end

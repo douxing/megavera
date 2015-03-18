@@ -1,0 +1,16 @@
+defaults: &defaults
+  background_color: '#171d25'
+  content_background_color: '#ffffff'
+  content_text_color: '#485463'
+  content_top_background_color: '#2a3340'
+  content_top_text_color: '#ffffff'
+  content_menu_background_color: '#1d242e'
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults

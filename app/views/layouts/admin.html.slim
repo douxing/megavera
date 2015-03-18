@@ -54,6 +54,10 @@ html xmlns="http://www.w3.org/1999/xhtml"
                 = link_to edit_admin_password_path do
                   i.fa.fa-cog
                   span.nav-label Change Password
+              li
+                = link_to theme_admin_path do
+                  i.fa.fa-pencil
+                  span.nav-label Change Colors
       #page-wrapper.gray-bg.dashboard-1
         == yield
     = javascript_include_tag "admin"

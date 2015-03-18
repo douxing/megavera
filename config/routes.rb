@@ -20,6 +20,9 @@ Rails.application.routes.draw do
       put :social_recruitment, to: 'admin#update_social_recruitment'
       get :internship, to: 'admin#edit_internship'
       put :internship, to: 'admin#update_internship'
+      get :theme, to: 'admin#edit_theme'
+      put :theme, to: 'admin#update_theme'
+      delete :theme, to: 'admin#destroy_theme'
     end
 
     resource :password, controller: 'password', only: [:new, :create, :edit, :update]

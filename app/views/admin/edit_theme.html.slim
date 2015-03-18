@@ -1,0 +1,24 @@
+.row.border-bottom.white-bg.dashboard-header
+  h2 Edit Colors
+  small Edit your theme colors here
+.row
+  .col-lg-12
+    .ibox.float-e-margins
+      .ibox-title
+      - if @errors && !@errors.empty?
+        .ibox-content.ibox-heading
+          h2 = "#{pluralize(@errors.count, "error")} prohibited this news from being saved:"
+          ul
+            - @errors.each do |error|
+              li= "#{error.name} #{error.errors.full_messages.first}"
+      .ibox-content
+        = form_tag theme_admin_path, method: :put, class: "form-horizontal" do
+          .row
+            - @colors.each do |color|
+              .col-xs-4
+                = label_tag color.name, nil, class: "control-label"
+                = custom_color_field_tag color
+          .form-group.m-t
+            .col-sm-4
+              = submit_tag "Save", class: "btn btn-primary"
+              = link_to "Reset", theme_admin_path, class: "btn btn-white m-l", method: :delete
