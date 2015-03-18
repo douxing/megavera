@@ -39,9 +39,16 @@ $(document).ready(function () {
 
   $(".banner").mouseenter(function() {
     $(this).find(".info").stop(true).animate({width: "308px", height: "190px"}, {
+      step: function() {
+        $(this).css({"margin-left": -($(this).width()/2), "margin-top": -($(this).height()/2)});
+      }
     });
   }).mouseleave(function() {
-    $(this).find(".info").stop(true).animate({width: 0, height: 0});
+    $(this).find(".info").stop(true).animate({width: 0, height: 0}, {
+      step: function() {
+        $(this).css({"margin-left": -($(this).width()/2), "margin-top": -($(this).height()/2)});
+      }
+    });
   });
 
   $("#slides").slidesjs({
