@@ -20,7 +20,10 @@ class ApplicationController < ActionController::Base
   end
 
   def render_asset(asset)
-    Megavera::Application.assets.find_asset(asset).body.html_safe
+    f = File.open(Rails.root.join('app', 'assets', 'stylesheets', 'themes', 'custom.css'))
+    str = f.read
+    f.close
+    str
   end
 
   def render_colors_json
