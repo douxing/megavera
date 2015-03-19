@@ -1,0 +1,100 @@
+body {
+    color: {{ font_color }};
+    background-color: {{ bg_color }};
+}
+
+a {
+    color: {{ font_color }};
+}
+a:hover {
+        color: {{ link_hover_color }};
+    }
+}
+
+.header .nav ul.menus > li + li:before {
+    background-color: {{ font_color }};
+}
+
+.footer {
+    color: {{ font_color }};
+}
+
+.container .main-header {
+    background-color: {{ content_topper_bg_color }};
+    -webkit-box-shadow: 0 -1px 1px {{ content_topper_shadow_color }};
+    -moz-box-shadow: 0 -1px 1px {{ content_topper_shadow_color }};
+    box-shadow: 0 -1px 1px {{ content_topper_shadow_color }};
+}
+.container .block>* {
+    -webkit-box-shadow: 3px 3px 1px {{ content_shadow_color }};
+    -moz-box-shadow: 3px 3px 1px {{ content_shadow_color }};
+    box-shadow: 3px 3px 1px {{ content_shadow_color }};
+}
+.container .artical {
+    color: {{ content_text_color }};
+    background-color: {{ content_bg_color }};
+    box-shadow: 3px 3px 1px {{ content_shadow_color }};
+    -webkit-box-shadow: 3px 3px 1px {{ content_shadow_color }};
+    -moz-box-shadow: 3px 3px 1px {{ content_shadow_color }};
+}
+.container .tabs-content .tabs-nav {
+    background-color: {{ content_menu_bg_color }};
+    box-shadow: 1px 1px 1px {{ content_shadow_color }};
+    -webkit-box-shadow: 1px 1px 1px {{ content_shadow_color }};
+    -moz-box-shadow: 1px 1px 1px {{ content_shadow_color }};
+}
+.container .tabs-content .tabs-nav>* {
+    border-right: 2px solid {{ bg_color }};
+}
+.container .tabs-content .tabs-nav>*:hover, .container .tabs-content .tabs-nav>*.active {
+    background-color: {{ content_bg_color }};
+    border-right: 2px solid {{ content_bg_color }};
+}
+.container .tabs-content .tabs-nav>*:hover a, .container .tabs-content .tabs-nav>*:hover a:hover {
+    color: {{ content_text_color }};
+}
+.container .tabs-content .tabs-nav>*.active a, .container .tabs-content .tabs-nav>*.active a:hover {
+    color: {{ content_text_color }};
+}
+.container .tabs-content .tabs-nav > * a {
+    color: {{ content_bg_color }};
+}
+
+.home #slides {
+    color: {{ home_topper_text_color }};
+}
+.home .desc a {
+    color: {{ home_topper_link_color }};
+}
+.home .banners .banner .info {
+    background-color: {{ home_banner_hover_bg_color }};
+}
+.home .banners .banner .info a, .home .banners .banner .info a:hover {
+    color: {{ home_banner_hover_text_color }}
+}
+
+.news .news-item {
+        background-color: {{ news_bg_color }};
+        box-shadow: 3px 3px 1px {{ content_shadow_color }};
+        -webkit-box-shadow: 3px 3px 1px {{ content_shadow_color }};
+        -moz-box-shadow: 3px 3px 1px {{ content_shadow_color }};
+}
+
+.pagination>* {
+    background-color: {{ content_bg_color }};
+}
+.pagination>* a {
+    color: {{ content_text_color }};
+}
+.pagination>*:hover a {
+    color: {{ link_hover_color }};
+}
+.pagination>*.current {
+    color: {{ font_color }};
+}
+
+.about .row img{
+    box-shadow: 2px 2px 2px {{ bg_color }};
+    -webkit-box-shadow: 2px 2px 2px {{ bg_color }};
+    -moz-box-shadow: 2px 2px 2px {{ bg_color }};
+}

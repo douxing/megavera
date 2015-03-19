@@ -11,11 +11,26 @@
 // about supported directives.
 //
 //= require jquery
+//= require underscore
 //= require swiper
 //= require jquery.fancybox
 //= require jquery.slides
 
 $(document).ready(function () {
+  // render css
+  var customCss = function() {
+    var cssData = eval('(' + $("#colors-template").html() + ')');
+    _.templateSettings = {
+      interpolate: /\{\{(.+?)\}\}/g
+    };
+    var cssTemplate = _.template($("#css-template").html());
+    var result = cssTemplate(cssData);
+
+    var styleNode = $("<style></style>").html(result);
+    $("head").append(styleNode);
+  };
+  customCss();
+
   $(".tabs-nav").children().click(function() {
     var $active = $(this).parent().children(".active");
     $active.removeClass("active").animate({

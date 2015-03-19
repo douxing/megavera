@@ -1,10 +1,18 @@
 defaults: &defaults
-  background_color: '#171d25'
-  content_background_color: '#ffffff'
+  bg_color: '#171d25'
+  font_color: '#fff'
+  link_hover_color: '#c3d7ef'
+  content_bg_color: '#ffffff'
+  content_shadow_color: '#000'
+  content_topper_bg_color: '#2a3340'
+  content_topper_shadow_color: '#171d25'
   content_text_color: '#485463'
-  content_top_background_color: '#2a3340'
-  content_top_text_color: '#ffffff'
-  content_menu_background_color: '#1d242e'
+  content_menu_bg_color: '#1d242e'
+  home_topper_text_color: '#bbb'
+  home_topper_link_color: '#586371'
+  home_banner_hover_bg_color: '#3498db'
+  home_banner_hover_text_color: '#fff'
+  news_bg_color: '#1d242e'
 
 development:
   <<: *defaults

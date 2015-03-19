@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   before_action :set_locale
 
-  helper_method :current_user
+  helper_method :current_user, :render_asset, :render_colors_json
 
   def set_locale
     I18n.locale = params[:locale] || I18n.default_locale
@@ -17,6 +17,29 @@ class ApplicationController < ActionController::Base
 
   def render_404
     render template: 'pages/404', status: 404
+  end
+
+  def render_asset(asset)
+    Megavera::Application.assets.find_asset(asset).body.html_safe
+  end
+
+  def render_colors_json
+    data = {}
+    color_configs.each { |config| data[config.name] = config.value }
+    data.to_json.html_safe
+  end
+
+  def color_configs
+    configs = []
+    theme_colors.each do |name|
+      configs << SysConfig.find_config(name, nil)
+    end
+
+    configs
+  end
+
+  def theme_colors
+    DefaultSetting.keys.select { |item| item.end_with?('_color') }
   end
 
   protected

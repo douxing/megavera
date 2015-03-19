@@ -58,10 +58,7 @@ class AdminController < ApplicationController
   end
 
   def edit_theme
-    @colors = []
-    theme_colors.each do |name|
-      @colors << SysConfig.find_config(name, nil)
-    end
+    @colors = color_configs
   end
 
   def update_theme
@@ -99,9 +96,5 @@ class AdminController < ApplicationController
 
   def config_locale
     params.permit(:config_locale)[:config_locale] || 'en'
-  end
-
-  def theme_colors
-    %w(background_color content_background_color content_text_color content_top_background_color content_top_text_color content_menu_background_color)
   end
 end

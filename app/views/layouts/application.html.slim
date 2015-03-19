@@ -7,8 +7,8 @@ html xmlns="http://www.w3.org/1999/xhtml"
     meta name='renderer' content='webkit'
     title= @title || 'Megavera'
     = favicon_link_tag 'favicon.ico'
-    == yield(:css_files)
     = stylesheet_link_tag 'application', media: 'all'
+    == yield(:css_files)
     = csrf_meta_tags
   body
     .header
@@ -19,3 +19,7 @@ html xmlns="http://www.w3.org/1999/xhtml"
       == render 'layouts/footer'
     = javascript_include_tag "application"
     == yield(:js_files)
+    script#css-template type='script/template'
+      = render_asset('themes/custom')
+    script#colors-template type='script/template'
+      = render_colors_json
