@@ -63,9 +63,6 @@ a:hover {
 .home #slides {
     color: {{ home_topper_text_color }};
 }
-.home .desc a {
-    color: {{ home_topper_link_color }};
-}
 .home .banners .banner .info {
     background-color: {{ home_banner_hover_bg_color }};
 }

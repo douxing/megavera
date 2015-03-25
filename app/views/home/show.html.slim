@@ -1,39 +1,39 @@
 .home
   .desc
     #slides
-      .slide_item The best ideas come as jokes. Make your thinking as funny as possible.
-      .slide_item We are a creative company and we can make genius theme for you!
-    = link_to about_home_path do
-      span= t("View about us")
-      i.fa.fa-angle-double-right
+      - t("sliders").each do |slider|
+        .slide-item
+          .wrap
+            span.content= slider[:content]
+            span= "-- #{slider[:author]}"
   .banners
     .banner
       = image_tag "1.jpg"
       .info
         .inner
-          h3= link_to "Home", "#"
+          h3= link_to t("home"), home_path
     .banner
       = image_tag "2.jpg"
       .info
         .inner
-          h3= link_to "About us", "#"
+          h3= link_to t("about_us"), about_home_path
     .banner
       = image_tag "3.jpg"
       .info
         .inner
-          h3= link_to "Typical Solution", "#"
+          h3= link_to t("TS"), typical_solution_home_path
     .banner
       = image_tag "4.jpg"
       .info
         .inner
-          h3= link_to "News", "#"
+          h3= link_to t("news"), news_home_path
     .banner
       = image_tag "5.jpg"
       .info
         .inner
-          h3= link_to "Career", "#"
+          h3= link_to t("career"), career_home_path
     .banner
       = image_tag "6.jpg"
       .info
         .inner
-          h3= link_to "Contact", "#"
+          h3= link_to t("contact"), contact_home_path

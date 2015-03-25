@@ -53,7 +53,7 @@ $(document).ready(function () {
    */
 
   $(".banner").mouseenter(function() {
-    $(this).find(".info").stop(true).animate({width: "308px", height: "190px"}, {
+    $(this).find(".info").stop(true).delay(30).animate({width: "308px", height: "190px"}, {
       step: function() {
         $(this).css({"margin-left": -($(this).width()/2), "margin-top": -($(this).height()/2)});
       }
@@ -68,7 +68,6 @@ $(document).ready(function () {
 
   $("#slides").slidesjs({
     width: 900,
-    height: 36,
     navigation: {
       active: false
     },
