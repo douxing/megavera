@@ -1,25 +1,26 @@
 - content_for :js_files do
   = javascript_include_tag "http://api.map.baidu.com/api?key=&v=1.1&services=true"
-.artical.contact
-  h2= t("contact")
-  .row
-    .col-4
-      div.p-b
-        h3 Address
-        span Room 707, Zhong Bo Shang Wu Building
-        br
-        span 1112 Hang Gui Road, 201804
-        br
-        span Shanghai, P.R. China
-      .p-b.p-t
-        h3 Tel
-        span +8612345678
-      .p-b.p-t
-        h3 Email
-        span info@megavera.com
-      .p-b.p-t
-        h3 Web
-        span www.megavera.com
-    .col-8
-      h3 Location
-      #map
+.narrow
+  .artical.contact
+    h2= t("contact")
+    .row
+      .col-4
+        div.p-b
+          h3 Address
+          span Room 707, Zhong Bo Shang Wu Building
+          br
+          span 1112 Hang Gui Road, 201804
+          br
+          span Shanghai, P.R. China
+        .p-b.p-t
+          h3 Tel
+          span +8612345678
+        .p-b.p-t
+          h3 Email
+          span info@megavera.com
+        .p-b.p-t
+          h3 Web
+          span www.megavera.com
+      .col-8
+        h3 Location
+        #map

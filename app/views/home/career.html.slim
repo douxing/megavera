@@ -1,12 +1,13 @@
-.main-header= t('opportunities_at_megavera')
-.tabs-content
-  ul.tabs-nav
-    li.active= link_to t('social_recruitment'), 'javascript:void(0)'
-    li= link_to t('internship'), 'javascript:void(0)'
-  .tabs-main
-    .artical
-      h2= t('social_recruitment')
-      == SysConfig.get_value('social_recruitment', I18n.locale)
-    .artical
-      h2= t('internship')
-      == SysConfig.get_value('internship', I18n.locale)
+.narrow
+  .main-header= t('opportunities_at_megavera')
+  .tabs-content
+    ul.tabs-nav
+      li.active= link_to t('social_recruitment'), 'javascript:void(0)'
+      li= link_to t('internship'), 'javascript:void(0)'
+    .tabs-main
+      .artical
+        h2= t('social_recruitment')
+        == SysConfig.get_value('social_recruitment', I18n.locale)
+      .artical
+        h2= t('internship')
+        == SysConfig.get_value('internship', I18n.locale)

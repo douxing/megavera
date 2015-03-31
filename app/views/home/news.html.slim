@@ -1,10 +1,11 @@
-.news
-  - @news.each do |item|
-    .news-item
-      = link_to news_path(item.index_id) do
-        .left
-          = image_tag(item.first_image ? item.first_image : 'news_title.jpg')
-        .right
-          h3= item.title
-          .content== item.content_without_image
-  = paginate @index_ids
+.narrow
+  .news
+    - @news.each do |item|
+      .news-item
+        = link_to news_path(item.index_id) do
+          .left
+            = image_tag(item.first_image ? item.first_image : 'news_title.jpg')
+          .right
+            h3= item.title
+            .content== item.content_without_image
+    = paginate @index_ids

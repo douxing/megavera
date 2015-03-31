@@ -84,9 +84,11 @@ h3 {
 }
 
 .container {
-    width: 926px;
-    margin: 0 auto;
     margin-top: 14px;
+    .narrow {
+        width: 926px;
+        margin: 0 auto;
+    }
     .main-header {
         width: 100%;
         height: 50px;
@@ -206,8 +208,38 @@ h3 {
 }
 
 .home {
+    background-color: #f7f8fa;
+    .desc {
+        background: url("http://www.thoughtspot.com/sites/all/themes/thoughtspot/css/images/home/front-hero.jpg") no-repeat center;
+        height: 300px;
+        min-width: 926px;
+        .narrow {
+            position: relative;
+            height: 100%;
+            .play {
+                display: inline-block;
+                height: 120px;
+                width: 120px;
+                text-align: center;
+                position: absolute;
+                top: 50%;
+                left: 18%;
+                margin-top: -60px;
+                &:before {
+                    content: "\f144";
+                    font-family: "FontAwesome";
+                    font-size: 120px;
+                    line-height: 120px;
+                }
+            }
+        }
+    }
+
     #slides {
-        height: 70px;
+        position: absolute;
+        left: 60%;
+        width: 40%;
+        top: 30%;
         font-size: 14px;
         color: $home-topper-text-color;
     }
@@ -234,13 +266,12 @@ h3 {
 
     .desc {
         font-size: 14px;
-        margin-bottom: 30px;
     }
 
     .banners {
         cursor: pointer;
         overflow: hidden;
-        margin-bottom: 30px;
+        padding: 30px 0;
         img {
             width: 308px;
         }

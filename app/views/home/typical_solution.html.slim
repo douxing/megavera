@@ -2,77 +2,78 @@
   = javascript_include_tag "//vjs.zencdn.net/4.12/video.js"
 - content_for :css_files do
   = stylesheet_link_tag "//vjs.zencdn.net/4.12/video-js.css"
-.main-header= t('TS')
-.tabs-content.solutions
-  ul.tabs-nav
-    li.active= link_to 'OVERVIEW', 'javascript:void(0)'
-    li= link_to 'CONSULTANCY', 'javascript:void(0)'
-    li= link_to 'BAGGAGE HAND EQUIPMENT', 'javascript:void(0)'
-    li= link_to 'EQUIPMENT AND SYSTEMS FOR PARCEL, POSTAL & DISTRIBUTION', 'javascript:void(0)'
-    li= link_to 'CUSTOMER SERVICE & SUPPORT', 'javascript:void(0)'
-  .tabs-main
-    .artical.active
-      h2 OVERVIEW
-      p China is in the period of rapid economic development. Automation is playing an important role in the industry. While Megareva Automation is the one devoted to helping the enterprises of all kinds of industries to do a better job. We can offer a wide range of solutions based on custom-tailored requirements.
-      .row.videos
-        .col-4
-          = link_to "#media1", class: "various" do
-            = image_tag "media1.jpg"
-          .hidden
-            #media1
-              video id="media1-video" class="video-js vjs-default-skin" width="800" height="450" data-setup='{"autoplay": false, "controls": true, "preload": "none"}'
-                source src="/videos/media1.mp4"
-        .col-4
-          = link_to "#media2", class: "various" do
-            = image_tag "media2.jpg"
-          .hidden
-            #media2
-              video id="media2-video" class="video-js vjs-default-skin" width="800" height="450" data-setup='{"autoplay": false, "controls": true, "preload": "none"}'
-                source src="/videos/media2.mp4"
-        .col-4
-          = link_to "#media3", class: "various" do
-            = image_tag "media3.jpg"
-          .hidden
-            #media3
-              video id="media3-video" class="video-js vjs-default-skin" width="800" height="450" data-setup='{"autoplay": false, "controls": true, "preload": "none"}'
-                source src="/videos/media3.mp4"
-    .artical
-      h2 CONSULTANCY
-      .row.p-b
-        = image_tag "consultancy.jpg"
-      p Our experienced, multinational team can provide following expertise:
-      ul
-        li Design and system layout
-        li Mechanical & electrical product development
-        li Electrical system controls & software solutions
-        li Warehouse Control System & Warehouse Management System solutions
-    .artical
-      h2 BAGGAGE HAND EQUIPMENT
-      p We provide a wide variety of high quality equipment for use in baggage handling systems, such as:
-      ul
-        li Check-In conveyors
-        li Collector lines and baggage conveyors
-        li ETR solutions incl. continuous elevators
-        li Horizontal divert arms
-        li Vertical sorters
-        li Straight and spiral chutes
-        li Etc.
-      p We provide both exclusive OEM equipment and can also provide our own in-house designed solutions
-      p Our scope is limited to equipment supply only, meaning we will not act as a system integrator.
-    .artical
-      h2 EQUIPMENT AND SYSTEMS FOR PARCEL, POSTAL & DISTRIBUTION
-      p We provide a full assortment of technologies, along with their related equipment, for express parcel, postal, warehousing, distribution and E-commerce applications incl.:
-      ul
-        li Conveying technology (both for individual parcel and bulk conveying)
-        li Automatic sorting and diverting technology
-        li Robotized palletizing technology
-        li Etc.
-      p Besides equipment we can also provide sub-systems and complete turnkey solutions. All control and software solutions are developed, tested and provided in-house. We can include WCS and WMS solutions.
-    .artical
-      h2 CUSTOMER SERVICE & SUPPORT
-      p We provide customer service for our Shanghai office. This service can include:
-      ul
-        li On-site technical service and maintenance support
-        li Online support and remote access
-        li Operator training
-        li Supply of spare parts & spare parts management
+.narrow
+  .main-header= t('TS')
+  .tabs-content.solutions
+    ul.tabs-nav
+      li.active= link_to 'OVERVIEW', 'javascript:void(0)'
+      li= link_to 'CONSULTANCY', 'javascript:void(0)'
+      li= link_to 'BAGGAGE HAND EQUIPMENT', 'javascript:void(0)'
+      li= link_to 'EQUIPMENT AND SYSTEMS FOR PARCEL, POSTAL & DISTRIBUTION', 'javascript:void(0)'
+      li= link_to 'CUSTOMER SERVICE & SUPPORT', 'javascript:void(0)'
+    .tabs-main
+      .artical.active
+        h2 OVERVIEW
+        p China is in the period of rapid economic development. Automation is playing an important role in the industry. While Megareva Automation is the one devoted to helping the enterprises of all kinds of industries to do a better job. We can offer a wide range of solutions based on custom-tailored requirements.
+        .row.videos
+          .col-4
+            = link_to "#media1", class: "various" do
+              = image_tag "media1.jpg"
+            .hidden
+              #media1
+                video id="media1-video" class="video-js vjs-default-skin" width="800" height="450" data-setup='{"autoplay": false, "controls": true, "preload": "none"}'
+                  source src="/videos/media1.mp4"
+          .col-4
+            = link_to "#media2", class: "various" do
+              = image_tag "media2.jpg"
+            .hidden
+              #media2
+                video id="media2-video" class="video-js vjs-default-skin" width="800" height="450" data-setup='{"autoplay": false, "controls": true, "preload": "none"}'
+                  source src="/videos/media2.mp4"
+          .col-4
+            = link_to "#media3", class: "various" do
+              = image_tag "media3.jpg"
+            .hidden
+              #media3
+                video id="media3-video" class="video-js vjs-default-skin" width="800" height="450" data-setup='{"autoplay": false, "controls": true, "preload": "none"}'
+                  source src="/videos/media3.mp4"
+      .artical
+        h2 CONSULTANCY
+        .row.p-b
+          = image_tag "consultancy.jpg"
+        p Our experienced, multinational team can provide following expertise:
+        ul
+          li Design and system layout
+          li Mechanical & electrical product development
+          li Electrical system controls & software solutions
+          li Warehouse Control System & Warehouse Management System solutions
+      .artical
+        h2 BAGGAGE HAND EQUIPMENT
+        p We provide a wide variety of high quality equipment for use in baggage handling systems, such as:
+        ul
+          li Check-In conveyors
+          li Collector lines and baggage conveyors
+          li ETR solutions incl. continuous elevators
+          li Horizontal divert arms
+          li Vertical sorters
+          li Straight and spiral chutes
+          li Etc.
+        p We provide both exclusive OEM equipment and can also provide our own in-house designed solutions
+        p Our scope is limited to equipment supply only, meaning we will not act as a system integrator.
+      .artical
+        h2 EQUIPMENT AND SYSTEMS FOR PARCEL, POSTAL & DISTRIBUTION
+        p We provide a full assortment of technologies, along with their related equipment, for express parcel, postal, warehousing, distribution and E-commerce applications incl.:
+        ul
+          li Conveying technology (both for individual parcel and bulk conveying)
+          li Automatic sorting and diverting technology
+          li Robotized palletizing technology
+          li Etc.
+        p Besides equipment we can also provide sub-systems and complete turnkey solutions. All control and software solutions are developed, tested and provided in-house. We can include WCS and WMS solutions.
+      .artical
+        h2 CUSTOMER SERVICE & SUPPORT
+        p We provide customer service for our Shanghai office. This service can include:
+        ul
+          li On-site technical service and maintenance support
+          li Online support and remote access
+          li Operator training
+          li Supply of spare parts & spare parts management
