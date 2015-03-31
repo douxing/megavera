@@ -5,35 +5,29 @@
         .slide-item
           .wrap
             span.content= slider[:content]
-            span= "-- #{slider[:author]}"
+            span.quote= slider[:author]
   .banners
     .banner
       = image_tag "1.jpg"
       .info
-        .inner
-          h3= link_to t("home"), home_path
+        = link_to t("home"), home_path, class: "inner"
     .banner
       = image_tag "2.jpg"
       .info
-        .inner
-          h3= link_to t("about_us"), about_home_path
+        = link_to t("about_us"), about_home_path, class: "inner"
     .banner
       = image_tag "3.jpg"
       .info
-        .inner
-          h3= link_to t("TS"), typical_solution_home_path
+        = link_to t("TS"), typical_solution_home_path, class: "inner"
     .banner
       = image_tag "4.jpg"
       .info
-        .inner
-          h3= link_to t("news"), news_home_path
+        = link_to t("news"), news_home_path, class: "inner"
     .banner
       = image_tag "5.jpg"
       .info
-        .inner
-          h3= link_to t("career"), career_home_path
+        = link_to t("career"), career_home_path, class: "inner"
     .banner
       = image_tag "6.jpg"
       .info
-        .inner
-          h3= link_to t("contact"), contact_home_path
+        = link_to t("contact"), contact_home_path, class: "inner"
