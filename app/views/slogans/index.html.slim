@@ -1,0 +1,18 @@
+.row.border-bottom.white-bg.dashboard-header
+  h2 All Slogans
+  small Listing Slogans
+
+.wrapper.wrapper-content
+  - @slogans.each do |item|
+    .row
+      .col-lg-12
+        .ibox.float-e-margins
+          .ibox-title
+            h5= item.author
+            .ibox-tools
+              =link_to edit_slogan_path(item) do
+                i.fa.fa-wrench
+              = link_to slogan_path(item), method: :delete, data: { confirm: 'Are you sure?' } do
+                i.fa.fa-times
+          .ibox-content
+            p== item.content

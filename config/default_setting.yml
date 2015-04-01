@@ -12,6 +12,7 @@ defaults: &defaults
   home_topper_link_color: '#586371'
   home_banner_hover_bg_color: '#3498db'
   home_banner_hover_text_color: '#fff'
+  home_bg_color: '#f7f8fa'
   news_bg_color: '#1d242e'
 
 development:

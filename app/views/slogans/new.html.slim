@@ -1,0 +1,15 @@
+.row.border-bottom.white-bg.dashboard-header
+  h2 New Slogan
+  small Post new slogan here
+.row
+  .col-lg-12
+    .ibox.float-e-margins
+      .ibox-title
+      - if @slogan.errors.any?
+        .ibox-content.ibox-heading
+          h2 = "#{pluralize(@slogan.errors.count, "error")} prohibited this news from being saved:"
+          ul
+            - @slogan.errors.full_messages.each do |message|
+              li = message
+      .ibox-content
+        == render 'form'

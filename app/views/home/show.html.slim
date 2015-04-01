@@ -1,13 +1,21 @@
+- content_for :js_files do
+  = javascript_include_tag "//vjs.zencdn.net/4.12/video.js"
+- content_for :css_files do
+  = stylesheet_link_tag "//vjs.zencdn.net/4.12/video-js.css"
 .home
   .desc
     .narrow
-      .play
+      = link_to "", "#hero", class: "play various"
+      .hidden
+        #hero
+          video id="hero-video" class="video-js vjs-default-skin" width="800" height="450" data-setup='{"autoplay": false, "controls": true, "preload": "none"}'
+            source src="/videos/megavera.mp4"
       #slides
-        - t("sliders").each do |slider|
+        - @slogans.each do |slogan|
           .slide-item
             .wrap
-              span.content= slider[:content]
-              span.quote= slider[:author]
+              span.content= slogan.content
+              span.quote= slogan.author
   .narrow
     .banners
       .banner

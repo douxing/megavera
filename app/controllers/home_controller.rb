@@ -20,4 +20,8 @@ class HomeController < ApplicationController
 
   def about
   end
+
+  def show
+    @slogans = Slogan.all
+  end
 end

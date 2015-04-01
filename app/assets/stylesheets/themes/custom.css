@@ -95,3 +95,7 @@ a:hover {
     -webkit-box-shadow: 2px 2px 2px {{ content_shadow_color }};
     -moz-box-shadow: 2px 2px 2px {{ content_shadow_color }};
 }
+
+.home {
+    background-color: {{ home_bg_color }};
+}

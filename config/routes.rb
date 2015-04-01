@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   end
 
   resources :news, controller: 'news'
+  resources :slogans, controller: 'slogans'
   resource :admin, controller: 'admin', only: [:show] do
     member do
       get :social_recruitment, to: 'admin#edit_social_recruitment'

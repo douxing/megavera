@@ -42,6 +42,16 @@ html xmlns="http://www.w3.org/1999/xhtml"
                     = link_to "New News", new_news_path
               li
                 = link_to "#" do
+                  i.fa.fa-th-large
+                  span.nav-label Slogans
+                  span.fa.arrow
+                ul.nav.nav-second-level.collapse
+                  li
+                    = link_to "All", slogans_path
+                  li
+                    = link_to "New Slogans", new_slogan_path
+              li
+                = link_to "#" do
                   i.fa.fa-group
                   span.nav-label Jobs
                   span.fa.arrow

@@ -52,12 +52,3 @@ zh:
   about_2: '我们的团队具有超过三十年的材料转运行业经验，从设计、产品研发到工程制造、产品安装、试运行再到售后服务，为客户提供一条龙式的服务。'
   about_3: '我们提供多样化的服务和产品，帮助客户提高工程效率，降低运营成本。'
   about_4: '我们的工厂完全经过国际标准化组织（ISO）的认证（9001, 14001 & 18001），并且实践精益制造。'
-  sliders: [
-    {content: "Believe you can and you are halfway there.", author: "Theodore Roosevelt"},
-    {content: "All lasting business is built on friendship.", author: "Alfred A. Montapert "},
-    {content: "There are no secrets to success. It is the result of preparation, hard work, and learning from failure.", author: "Colin Powell"},
-    {content: "Our work is the presentation of our capabilities.", author: "Edward Gibbon"},
-    {content: "If you don't drive your business, you will be driven out of business.", author: "B.C.Forbes"},
-    {content: "The way to get things done is not to mind who gets the credit for doing them.", author: "Benjamin Jowett"},
-    {content: "If there is anythin that a man can do well, I say let him do it. give him a chance.", author: "Abraham Lincoln"}
-  ]

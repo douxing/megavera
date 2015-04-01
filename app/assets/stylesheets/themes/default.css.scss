@@ -208,9 +208,10 @@ h3 {
 }
 
 .home {
-    background-color: #f7f8fa;
+    background-color: $home-bg-color;
     .desc {
         background: url("http://www.thoughtspot.com/sites/all/themes/thoughtspot/css/images/home/front-hero.jpg") no-repeat center;
+        background-color: #2b2b33;
         height: 300px;
         min-width: 926px;
         .narrow {

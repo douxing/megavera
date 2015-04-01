@@ -37,6 +37,20 @@
               #media3
                 video id="media3-video" class="video-js vjs-default-skin" preload="auto" width="800" height="450" data-setup='{"autoplay": false, "controls": true}'
                   source src="#{video_path('media3.mp4')}"
+          .col-4
+            = link_to "#media4", class: "various" do
+              = image_tag "media4.jpg"
+            .hidden
+              #media4
+                video id="media4-video" class="video-js vjs-default-skin" preload="auto" width="800" height="450" data-setup='{"autoplay": false, "controls": true}'
+                  source src="#{video_path('media4.mp4')}"
+          .col-4
+            = link_to "#media5", class: "various" do
+              = image_tag "media5.jpg"
+            .hidden
+              #media5
+                video id="media5-video" class="video-js vjs-default-skin" preload="auto" width="800" height="450" data-setup='{"autoplay": false, "controls": true}'
+                  source src="#{video_path('media5.mp4')}"
       .artical
         h2 咨询
         .row.p-b
