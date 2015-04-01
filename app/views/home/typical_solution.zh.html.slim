@@ -51,6 +51,13 @@
               #media5
                 video id="media5-video" class="video-js vjs-default-skin" preload="auto" width="800" height="450" data-setup='{"autoplay": false, "controls": true}'
                   source src="#{video_path('media5.mp4')}"
+          .col-4
+            = link_to "#media6", class: "various" do
+              = image_tag "media6.jpg"
+            .hidden
+              #media6
+                video id="media6-video" class="video-js vjs-default-skin" preload="auto" width="800" height="450" data-setup='{"autoplay": false, "controls": true}'
+                  source src="#{video_path('media6.mp4')}"
       .artical
         h2 咨询
         .row.p-b
